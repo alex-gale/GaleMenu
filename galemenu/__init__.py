@@ -1,16 +1,17 @@
 # Menu Classes
 
 class menu(object):
-    def __init__(self, menuName="Menu Name", border="=", inputPrompt=">"):
+    def __init__(self, name="Menu Name", border="=", prompt=">", text=""):
         # Define variables
-        self.menuName = menuName
+        self.menuName = name
         self.menuBorder = border
-        self.inputPrompt = inputPrompt
+        self.prompt = prompt
+        self.text = text
         self.menuItems = []
 
-    def addItem(self, itemFunc, itemName="Option", parameters=[]):
+    def addItem(self, function, name="Option", parameters=[]):
         # Add an item to the menu
-        newItem = menuItem(itemName, itemFunc, parameters)
+        newItem = menuItem(function, name, parameters)
         self.buffer = newItem
         self.menuItems.append(newItem)
 
@@ -27,9 +28,9 @@ class menu(object):
             print(self.menuItems[i].optionName)
 
         # take user input
-        print("Choose an option")
+        print(self.text)
         while True:
-            userInput = input(self.inputPrompt + " ")
+            userInput = input(self.prompt + " ")
             try:
                 self.menuItems[int(userInput)].execute()
                 break
@@ -39,7 +40,7 @@ class menu(object):
                 print("Please choose an option from the menu.")
 
 class menuItem(object):
-    def __init__(self, optionName, optionFunc, parameters):
+    def __init__(self, optionFunc, optionName, parameters):
         # Define variables
         self.optionName = optionName
         self.optionFunc = optionFunc
