@@ -39,7 +39,7 @@ menu.additem(function, name, [parameters])
 ```python
 menu.start()
 ```
-This will start the menu and display it at the point when it is
+This will start the menu and display it at the point when it is run
 
 ### Example
 ```python
