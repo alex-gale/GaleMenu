@@ -1,8 +1,9 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name="GaleMenu",
-    version="1.1.0",
+    author="Alex Gale",
+    version="1.1.1",
     license="MIT",
     packages=["galemenu"],
     url="https://github.com/alex-gale/GaleMenu",
