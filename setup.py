@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name="GaleMenu",
     author="Alex Gale",
-    version="1.1.1",
+    version="1.1.2",
     license="MIT",
     packages=["galemenu"],
     url="https://github.com/alex-gale/GaleMenu",
