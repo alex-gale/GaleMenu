@@ -2,9 +2,8 @@ from distutils.core import setup
 
 setup(
     name="GaleMenu",
-    version="1.0.0",
+    version="1.0.1",
     license="MIT",
     packages=["galemenu"],
-    long_description=open("README.md").read(),
-    long_description_content_type='text/markdown',
+    long_description=open("README.txt").read()
 )
