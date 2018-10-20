@@ -13,7 +13,7 @@ import galemenu
 
 ### Creating a menu
 ```python
-menu = galemenu.menu(name, [border], [prompt], [text])
+menu = galemenu.menu(name, [border], [prompt], [text], [error])
 ```
 **name** - the title of the menu
 
@@ -22,6 +22,8 @@ menu = galemenu.menu(name, [border], [prompt], [text])
 **prompt** - the characters shown before the input prompt (optional - default `>`)
 
 **text** - the text shown before the prompt (optional - blank by default)
+
+**error** - the message shown if an invalid menu choice made (optional - default `Please choose an option from the menu.`)
 
 ### Adding options to menu
 ```python
